@@ -1,8 +1,8 @@
 # Quant_friction_backtester
 A Python framework built to backtest trend-following strategies on NSE equities while dynamically modeling regulatory and Groww app transaction friction.
-# 📊 Multi-Asset Algorithmic Backtester (Net of Real-World Friction)
+# Multi-Asset Algorithmic Backtester (Net of Real-World Friction)
 
-## 📌 Project Overview
+## Project Overview
 This repository contains a vectorized quantitative finance backtesting framework built to evaluate standard moving average trend-following strategies. While baseline academic models evaluate performance in a friction-free vacuum, this framework integrates a production-grade transaction engine modeling real-world statutory taxes and platform fees from the Groww brokerage application.
 
 The strategy was stress-tested across a diverse multi-asset universe representing distinct market capitalization sizes, betas, and price dynamics within the National Stock Exchange (NSE) of India:
@@ -13,7 +13,7 @@ The strategy was stress-tested across a diverse multi-asset universe representin
 
 ---
 
-## ⚙️ The Operational Friction Model
+## The Operational Friction Model
 To accurately reflect institutional fund design and analyze scale economics, executions are simulated and compared across two distinct frameworks: a baseline single-share allocation (exposing flat-fee penalties) and an optimized fixed ticket allocation of **₹1,00,000**:
 - **Brokerage Fee:** Flat ₹20 per executed order leg (Groww platform)
 - **STT (Securities Transaction Tax):** 0.1% on buy and sell execution volume
@@ -24,7 +24,7 @@ To accurately reflect institutional fund design and analyze scale economics, exe
 
 ---
 
-## 🔍 Key Empirical Findings & Regime Analysis
+## Key Empirical Findings & Regime Analysis
 
 | Asset Ticker | Strategy Parameters | Total Completed Trades | Gross Strategy Return (No Fees) | Real-World Net Return (With Friction) | Primary Structural Insight |
 | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -38,6 +38,6 @@ To accurately reflect institutional fund design and analyze scale economics, exe
 
 ---
 
-## 🚀 Core Quantitative Conclusions
+## Core Quantitative Conclusions
 1. **The Capital Scale Imperative:** Testing proved that without scaling order ticket inputs (e.g., to ₹1,00,000), flat-fee execution layers ($₹20$ per trade) capture an unviable percentage of low-unit allocations. 
 2. **Regime Compatibility:** Trend-following mechanics yield immense alpha in structural momentum profiles (Adani) and excellent drawdown mitigation in correcting markets (DMART/Eternal), but suffer extreme decay in range-bound environments (Reliance/Vodafone Idea).
