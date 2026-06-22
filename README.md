@@ -38,9 +38,9 @@ To accurately reflect institutional fund design and analyze scale economics, exe
 
 ---
 
-# 📊 Vectorized Backtesting & Friction: Multi-Asset Regime Analysis Net of Execution Drag
+# Vectorized Backtesting & Friction: Multi-Asset Regime Analysis Net of Execution Drag
 
-## 📌 Executive Summary
+## Executive Summary
 This repository contains a vectorized quantitative finance backtesting framework built to evaluate a standard trend-following system (Simple Moving Average Crossover) across a multi-asset universe within the National Stock Exchange (NSE) of India. 
 
 While typical academic models evaluate backtests in a friction-free vacuum, this production-grade framework integrates a dynamic transaction engine modeling the exact statutory tax and platform fee layers of the Groww brokerage application. 
@@ -49,7 +49,7 @@ The framework stress-tests performance over a 5-year market cycle (2021–2026) 
 
 ---
 
-## ⚙️ The Operational Friction Model
+## The Operational Friction Model
 To accurately model scale economics and eliminate regressive fee drag on small account balances, executions are simulated using a standardized fixed ticket allocation size of **₹1,00,000 per trade**. The engine dynamically computes transaction penalties on the exact execution day using the following statutory framework:
 
 *   **Brokerage Fee:** Flat ₹20 per executed order leg (Groww Equity Delivery structure).
@@ -136,9 +136,3 @@ print(f"=== BACKTEST ENGINE METRICS FOR {ticker} ===")
 print(f"Total Completed Round Trips: {total_trades}")
 print(f"Theoretical Gross Strategy Return: {final_raw_return:.2f}%")
 print(f"Real-World Net Strategy Return: {final_net_return:.2f}%")
-
----
-
-## Core Quantitative Conclusions
-1. **The Capital Scale Imperative:** Testing proved that without scaling order ticket inputs (e.g., to ₹1,00,000), flat-fee execution layers ($₹20$ per trade) capture an unviable percentage of low-unit allocations. 
-2. **Regime Compatibility:** Trend-following mechanics yield immense alpha in structural momentum profiles (Adani) and excellent drawdown mitigation in correcting markets (DMART/Eternal), but suffer extreme decay in range-bound environments (Reliance/Vodafone Idea).
